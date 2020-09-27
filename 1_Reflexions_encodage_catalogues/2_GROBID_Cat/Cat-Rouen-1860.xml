@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../Specification/out/catEntrySpec.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title/>
+            </titleStmt>
+            <publicationStmt>
+                <p/>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <title>Catalogue de la dix-huitième exposition municipale ouverte au Musée de
+                        Rouen, le 15 Mai 1860</title>
+                    <editor>Veuve A. Surville</editor>
+                    <pubPlace>Rouen, Rue des Bons-Enfants, 46-48</pubPlace>
+                    <date when="1853">1860</date>
+                    <distributor source="https://gallica.bnf.fr/ark:/12148/bpt6k1181800p/f30.image"
+                        >BnF</distributor>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <!-- p.24 -->
+    <text>
+        <body>
+            <catalogueEntry>
+                <catalogueDesc>
+                    <name>BÉNARD (HUBERT-EUGÈNE)</name>, <trait>A Boulogne-sur-Mer, route de Calais,
+                        3; élève de M. Claudius Jacquand</trait>. </catalogueDesc>
+                <catalogueItem>
+                    <num>36</num>. <title>La Brise en rade de Boulogne-sur-Mer</title>
+                </catalogueItem>
+                <catalogueItem>
+                    <num>37</num>. <title>Barque de Pêcheur du Portel, levant l’ancre par un gros
+                        temps (marine).</title>
+                </catalogueItem>
+            </catalogueEntry>
+        </body>
+    </text>
+</TEI>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../Specification/out/catEntrySpec.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title/>
+            </titleStmt>
+            <publicationStmt>
+                <p/>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <title>CATALOGUE de letrres autographes et de livres Parmi lesquels on remarque
+                        des Ouvrages illustrés, des Brochures sur la Révolution, et des grandes
+                        Éditions des Classiques de P. Didot. dont la vente aura lieu rue des
+                        Bons-Enfants, 28, Maison Silvestre salle n°1 Le Jeudi 5 Février 1857, &amp;
+                        les 2 jours suivants à 7 heures précises du soir.</title>
+                    <editor>Etienne Charavay</editor>
+                    <publisher>Etienne Charavay</publisher>
+                    <pubPlace>Paris, Rue de Seine, n°53</pubPlace>
+                    <date>1857</date>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <!-- p.6 -->
+    <text>
+        <body>
+            <catalogueEntry>
+                <num>41</num>. 
+                <catalogueDesc>
+                    <name>DENTZEL</name>, 
+                    <trait>député du Bas-Rhin à la Convention</trait>.
+                </catalogueDesc>
+                <catalogueItem>
+                    <desc>L. aut. sig. au président d la Convention. Maison d'arrêt des Ecossais, an III. 1 p. pl. in-4.</desc>
+                    <note>Arrêté depuis neuf mois, et étant tombé malade, il demande à être transféré chez lui avec un garde.</note>
+                </catalogueItem>
+            </catalogueEntry>
+        </body>
+    </text>
+</TEI>

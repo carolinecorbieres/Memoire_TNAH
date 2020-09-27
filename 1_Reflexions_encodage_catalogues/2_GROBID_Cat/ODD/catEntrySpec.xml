@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Spécification d'une structure d'entrée de catalogues</title>
+            <author>
+               <persName>
+                  <forename>Laurent</forename>
+                  <surname>Romary</surname>
+               </persName>
+            </author>
+         </titleStmt>
+         <publicationStmt>
+            <p>for use by whoever wants it</p>
+         </publicationStmt>
+         <notesStmt>
+            <note type="ns">http://www.example.org/ns/nonTEI</note>
+         </notesStmt>
+         <sourceDesc>
+            <p>created on Friday 20th March 2020 11:01:40 AM</p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <divGen type="toc"/>
+      </front>
+      <body>
+         <note><att>type</att> on <gi>catEntry</gi> to indicate what category of object the entry is about (e.g.
+            saleItem, painting, etc. to be refined)</note>
+         <schemaSpec ident="catalogues" docLang="en" prefix="tei_" xml:lang="en">
+            <moduleRef key="core" except=""/>
+            <moduleRef key="tei" except=""/>
+            <moduleRef key="header" except=""/>
+            <moduleRef key="textstructure" except=""/>
+            <moduleRef key="namesdates" except=""/>
+            <moduleRef key="analysis" except=""/>
+            <moduleRef key="msdescription" except=""/>
+
+            <moduleSpec ident="catalogues"/>
+
+            <elementSpec ident="catalogueEntry" module="catalogues">
+               <gloss xml:lang="en">catalogue entry</gloss>
+               <desc xml:lang="en">contains a single structured entry in any kind of catalogue, exhibition or
+                  sales.</desc>
+               <classes>
+                  <memberOf key="att.global"/>
+                  <memberOf key="att.typed"/>
+                  <memberOf key="att.sortable"/>
+                  <memberOf key="model.common"/>
+               </classes>
+               <content>
+                  <alternate minOccurs="1" maxOccurs="unbounded">
+                     <elementRef key="catalogueDesc"/>
+                     <elementRef key="catalogueItem"/>
+                     <elementRef key="catalogueEntry"/>
+                     <elementRef key="pc"/>
+                     <elementRef key="num"/>
+                     <classRef key="model.global"/>
+                     <classRef key="model.ptrLike"/>
+                  </alternate>
+               </content>
+            </elementSpec>
+
+            <elementSpec ident="catalogueDesc" module="catalogues">
+               <desc xml:lang="en">provides descriptive information about a catalogue entry or item.</desc>
+               <classes>
+                  <memberOf key="att.global"/>
+               </classes>
+               <content>
+                  <alternate minOccurs="1" maxOccurs="unbounded">
+                     <textNode/>
+                     <elementRef key="pc"/>
+                     <classRef key="model.catalogueDescPart"/>
+                     <classRef key="model.global"/>
+                     <classRef key="model.ptrLike"/>
+                  </alternate>
+               </content>
+            </elementSpec>
+
+            <elementSpec ident="catalogueItem" module="catalogues">
+               <desc xml:lang="en">describes en elementary item in a catalogue.</desc>
+               <classes>
+                  <memberOf key="att.global"/>
+               </classes>
+               <content>
+                  <alternate minOccurs="1" maxOccurs="unbounded">
+                     <textNode/>
+                     <elementRef key="num"/>
+                     <elementRef key="pc"/>
+                     <elementRef key="history"/>
+                     <elementRef key="place"/>
+                     <elementRef key="desc"/>
+                     <elementRef key="catalogueDesc"/>
+                     <classRef key="model.catalogueDescPart"/>
+                     <classRef key="model.global"/>
+                     <classRef key="model.ptrLike"/>
+                     <classRef key="model.measureLike"/>
+                  </alternate>
+               </content>
+            </elementSpec>
+
+            <classSpec type="model" ident="model.catalogueDescPart" module="catalogues"/>
+
+            <elementSpec ident="title" mode="change">
+               <classes mode="change">
+                  <memberOf key="model.catalogueDescPart"/>
+               </classes>
+            </elementSpec>
+
+            <elementSpec ident="author" mode="change">
+               <classes mode="change">
+                  <memberOf key="model.catalogueDescPart" mode="add"/>
+               </classes>
+            </elementSpec>
+            
+            <elementSpec ident="pc" mode="change">
+               <classes mode="change">
+                  <memberOf key="model.personPart" mode="add"/>
+               </classes>
+            </elementSpec>
+
+            <classSpec type="model" ident="model.personLike" mode="change">
+               <classes mode="change">
+                  <memberOf key="model.catalogueDescPart" mode=""/>
+               </classes>
+            </classSpec>
+
+            <classSpec type="model" ident="model.nameLike.agent" mode="change">
+               <classes mode="change">
+                  <memberOf key="model.catalogueDescPart" mode="add"/>
+               </classes>
+            </classSpec>
+            
+            <classSpec type="model" ident="model.dateLike" mode="change">
+               <classes mode="change">
+                  <memberOf key="model.catalogueDescPart" mode="add"/>
+               </classes>
+            </classSpec>
+            
+            <classSpec type="model" ident="model.pPart.msdesc" mode="change">
+               <classes mode="change">
+                  <memberOf key="model.catalogueDescPart" mode="add"/>
+               </classes>
+            </classSpec>
+            
+         </schemaSpec>
+      </body>
+   </text>
+</TEI>

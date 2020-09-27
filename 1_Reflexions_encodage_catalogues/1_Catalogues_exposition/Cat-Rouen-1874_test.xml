@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Réflexions pour l'encodage de catalogues d'expo -->
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Title</title>
+         </titleStmt>
+         <publicationStmt>
+            <p>Publication Information</p>
+         </publicationStmt>
+         <sourceDesc>
+            <bibl>
+               <title>Catalogue de la vingt-quatrième exposition municipale de beaux-arts ouverte au
+                  musée de Rouen le 14 mai 1874</title>
+               <publisher> J. Lecerf</publisher>
+               <pubPlace>Rouen, Rue des Bons-Enfants, 46-48</pubPlace>
+               <date when="1874">1874</date>
+               <distributor source="https://gallica.bnf.fr/ark:/12148/bpt6k1181047b/f107.item"
+                  >BnF</distributor>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <!-- p. 101 -->
+   <text>
+      <!-- PENSER AUX ATTRIBUTS QUI PEUVENT ÊTRE UTILES -->
+      <body>
+         <superEntry n="2">
+            <!-- balise à utiliser uniquement s'il y a des divisions par salles ou types d'oeuvres, sinon, débuter 
+               par entry. 
+               superEntry permet d'encoder les éventuelles sous-divisions d'un catalogue; l'attribut n renseigne le 
+               numéro de cette division, il est également possible d'ajouter un attribut type qui permettrait de préciser 
+               s'il s'agit d'une salle ou d'une catégorie d'oeuvres -->
+            <head>Dessins.</head>
+            <!-- on renseigne ici le titre de la division -->
+            <entry>
+               <!-- correspond à une entrée dans une liste d'oeuvres ou d'artistes: 
+                  - cas pour les listes d'artistes: desc (exposant) puis un ou plusieurs items (oeuvres) 
+                  - cas pour les listes d'oeuvres: item (oeuvre) puis desc (exposant) -->
+               <desc>
+                  <!-- on renseigne dans desc toutes les informations sur l'exposant -->
+                  <!-- balise num à ajouter quand la numérotation se fait par artiste -->
+                  
+                  <persName role="exhibitor"> 
+                     <!-- ou name 
+                     l'attirbut role permet de préciser le rôle de la personne (ici exposant) -->
+                     <surname>ADELINE</surname>
+                     (<forename>Jules</forename>),
+                  </persName>
+                  <trait>
+                     <!-- infos biographiques rassemblées dans une seule balise (trait), à l'intérieure de laquelle 
+                        il est possible de récupérer certaines infos grâce à des balises -->
+                     <p>
+                        <birth>Né à Rouen</birth>. Médaille de bronze, Caen, 1873.
+                        <residence>Rue Eau-de-Robec, 36, Rouen</residence>.
+                     </p>
+                  </trait>
+                  <!-- possibilité d'ajouter d'autres balises pour pointer certaines informations de la biographie de 
+                     l'artiste: occupation, education, death, affiliation (permet de préciser si l'artiste est membre d'une 
+                        association), nationality, event -->
+               </desc>
+               <item n="633">
+                  <num>633.</num>
+                  <title>Musée d'Antiquités de Rouen. (Entrée de la galerie céramique).</title>
+                  
+                  <!-- si l'oeuvre fait l'objet d'une description: ajouter balise desc -->
+                  <!-- possibilité d'ajouter des balises pour décrire l'oeuvre : material, dimensions, date, 
+                     history (provenance), org (si l'oeuvre appartient à une institution), measure (prix), event, 
+                     note, quote, signatures -->
+               </item>
+               <item n="634">
+                  <num>634.</num>
+                  <title>L'Eglise de Longpaon à Darnétal près Rouen. (Effet de brouillard dans la vallée).</title>
+               </item>
+               <item n="635">
+                  <num>635.</num>
+                  <title>La porte du Bac à Rouen.</title>
+               </item>
+               <note>(Voir à la Gravure et à l'Architecture.)</note>
+               <!-- Notes éventuelles sans rapport avec les oeuvres (ici un lien vers d'autres sections) ou note 
+                  générale sur les oeuvres de tel exposant -->
+            </entry>
+         </superEntry>
+      </body>
+   </text>
+</TEI>
