@@ -1,6 +1,6 @@
 # Mémoire de stage du master "Technologies numériques appliquées à l'histoire"
 
-## Du catalogue au fichier TEI : Création d’un workflow pour encoder automatiquement en XML-TEI des catalogues d’exposition
+## _Du catalogue au fichier TEI : Création d’un workflow pour encoder automatiquement en XML-TEI des catalogues d’exposition_
 
 Ce mémoire a été réalisé dans le cadre d'un stage pour le projet Artl@s de mai à octobre 2020, dans le cadre du Master "Technologies numériques appliquées à l'histoire" de l'École des chartes. L'enjeu de ce stage était de s'appuyer sur le travail de Lucie Rondeau du Noyer pour proposer à l'équipe d'Artl@s un _workflow_ permettant d'encoder automatiquement des catalogues d'exposition des XIXe et XXe siècles afin de verser les données récupérées dans la base de données BasArt. 
 
